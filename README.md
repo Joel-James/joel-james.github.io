@@ -1,2 +1,2 @@
-# joel-james.github.io
+# joel.to
 Personal website for Joel
