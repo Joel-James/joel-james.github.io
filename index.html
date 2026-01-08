@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>joeljames ~ /home/joel</title>
+	<style>
+		/* Dracula Theme Colors */
+		:root {
+			--bg: #282a36;
+			--cur: #44475a;
+			--fg: #f8f8f2;
+			--comment: #6272a4;
+			--cyan: #8be9fd;
+			--green: #50fa7b;
+			--orange: #ffb86c;
+			--pink: #ff79c6;
+			--purple: #bd93f9;
+			--red: #ff5555;
+			--yellow: #f1fa8c;
+		}
+
+		body {
+			background-color: #1e1e1e; /* Darker outer background */
+			color: var(--fg);
+			font-family: 'Fira Code', 'Courier New', monospace;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			min-height: 100vh;
+			margin: 0;
+			padding: 20px;
+		}
+
+		.terminal {
+			width: 100%;
+			max-width: 800px;
+			background: var(--bg);
+			border-radius: 10px;
+			box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+			overflow: hidden;
+			border: 1px solid var(--cur);
+		}
+
+		/* Terminal Title Bar */
+		.bar {
+			background: #343746;
+			padding: 10px 15px;
+			display: flex;
+			gap: 8px;
+			align-items: center;
+		}
+
+		.dot { width: 12px; height: 12px; border-radius: 50%; }
+		.red { background: var(--red); }
+		.yellow { background: var(--yellow); }
+		.green { background: var(--green); }
+
+		.content {
+			padding: 25px;
+			line-height: 1.6;
+		}
+
+		/* Syntax Highlighting Styles */
+		.prompt { color: var(--pink); font-weight: bold; }
+		.path { color: var(--purple); }
+		.command { color: var(--yellow); }
+		.string { color: var(--yellow); }
+		.comment { color: var(--comment); font-style: italic; }
+		.stat { color: var(--cyan); }
+
+		h1 { font-size: 1.5rem; color: var(--green); margin: 5px 0 15px 0; }
+		p { margin: 10px 0; }
+
+		.cursor {
+			display: inline-block;
+			width: 8px;
+			height: 1.2rem;
+			background-color: var(--green);
+			vertical-align: middle;
+			margin-left: 4px;
+			animation: blink 1s infinite;
+		}
+
+		@keyframes blink { 50% { opacity: 0; } }
+
+		a { color: var(--cyan); text-decoration: none; border-bottom: 1px solid transparent; transition: 0.3s; }
+		a:hover { border-bottom: 1px solid var(--cyan); color: var(--green); }
+
+		ul { list-style: none; padding: 0; margin: 10px 0; }
+		li::before { content: "➜ "; color: var(--pink); }
+	</style>
+</head>
+<body>
+
+<div class="terminal">
+	<div class="bar">
+		<div class="dot red"></div>
+		<div class="dot yellow"></div>
+		<div class="dot green"></div>
+		<span style="margin-left: 10px; font-size: 0.8rem; color: var(--comment)">joel@kerala: ~</span>
+	</div>
+	<div class="content">
+		<p><span class="prompt">joeljames</span>@<span class="path">kerala-india</span>:~$ whoami</p>
+		<h1>Joel James</h1>
+		<p class="comment">// Software Developer & Open Source Enthusiast</p>
+
+		<p><span class="prompt">joeljames</span>@<span class="path">kerala-india</span>:~$ cat info.json</p>
+		<p style="padding-left: 20px;">
+			{<br>
+			&nbsp;&nbsp;"location": <span class="string">"Kerala, India"</span>,<br>
+			&nbsp;&nbsp;"focus": <span class="string">"WordPress Plugins & PHP Libraries"</span>,<br>
+			&nbsp;&nbsp;"status": <span class="string">"Building in the open"</span><br>
+			}
+		</p>
+
+		<p><span class="prompt">joeljames</span>@<span class="path">kerala-india</span>:~$ ls project-links/</p>
+		<ul>
+			<li><a href="https://github.com/joel-james" target="_blank">GitHub</a> <span class="comment">(Code & Contributions)</span></li>
+			<li><a href="https://profiles.wordpress.org/joelcj91" target="_blank">WordPress.org</a> <span class="comment">(Plugins)</span></li>
+			<li><a href="https://linkedin.com/in/joelcj/" target="_blank">LinkedIn</a> <span class="comment">(Professional)</span></li>
+			<li><a href="https://duckdev.com/" target="_blank">Duck Dev</a> <span class="comment">(Portfolio)</span></li>
+		</ul>
+
+		<p><span class="prompt">joeljames</span>@<span class="path">kerala-india</span>:~$ <span class="cursor"></span></p>
+	</div>
+</div>
+
+</body>
+</html>
